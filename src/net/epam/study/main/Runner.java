@@ -17,7 +17,7 @@ public class Runner {
 		ApplianceService service = factory.getApplianceService();
 
 
-		Criteria criteriaOven = new Criteria(SearchCriteria.Oven.class.getSimpleName());//"Oven"
+		Criteria criteriaOven = new Criteria(SearchCriteria.Oven.class.getSimpleName());
 		criteriaOven.add(SearchCriteria.Oven.CAPACITY.toString(), 30000);
 		criteriaOven.add(SearchCriteria.Oven.WEIGHT.toString(), 6500);
 		criteriaOven.add(SearchCriteria.Oven.HEIGHT.toString(), 100);
@@ -33,7 +33,7 @@ public class Runner {
 		criteriaTabletPC.add(SearchCriteria.TabletPC.DISPLAY_INCHES.toString(), 6);
 		criteriaTabletPC.add(SearchCriteria.TabletPC.MEMORY_ROM.toString(), 32000);
 
-		appliance = service.find(criteriaTabletPC);// find(Object...obj)
+		appliance = service.find(criteriaTabletPC);
 		PrintApplianceInfo.printName(SearchCriteria.TabletPC.class.getSimpleName());
 		PrintApplianceInfo.print(appliance);
 
@@ -76,7 +76,7 @@ public class Runner {
 		criteriaSpeakers.add(SearchCriteria.Speakers.NUMBER_OF_SPEAKERS.toString(), 5);
 		criteriaSpeakers.add(SearchCriteria.Speakers.POWER_CONSUMPTION.toString(), 75);
 
-		appliance = service.find(criteriaSpeakers);// find(Object...obj)
+		appliance = service.find(criteriaSpeakers);
 		PrintApplianceInfo.printName(SearchCriteria.Speakers.class.getSimpleName());
 		PrintApplianceInfo.print(appliance);
 	}
